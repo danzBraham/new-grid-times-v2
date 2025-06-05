@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Menu, Search, User } from 'react-feather';
+import React from "react";
+import styled from "styled-components";
+import { Menu, Search, User } from "react-feather";
 
-import { QUERIES } from '../../constants';
+import { QUERIES } from "../../constants";
 
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import Logo from '../Logo';
-import Button from '../Button';
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import Logo from "../Logo";
+import Button from "../Button";
 
 const Header = () => {
   return (
