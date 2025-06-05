@@ -1,22 +1,37 @@
-import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../../constants";
+import { QUERIES } from "../../constants";
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
-    <a href={`/story/${id}`}>
+    <StoryWrapper href={`/story/${id}`}>
       <Wrapper>
         <Image alt={image.alt} src={image.src} />
         <Heading>{title}</Heading>
         <Abstract>{abstract}</Abstract>
       </Wrapper>
-    </a>
+    </StoryWrapper>
   );
 };
 
+const StoryWrapper = styled.a`
+  &:nth-of-type(1) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  &:nth-of-type(2) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  &:nth-of-type(3) {
+    padding-top: 16px;
+  }
+`;
+
 const Wrapper = styled.article`
   display: grid;
-  padding: 16px 0;
   background-color: var(--color-gray-100);
   grid-template-areas:
     "image heading"
@@ -24,6 +39,14 @@ const Wrapper = styled.article`
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
+
+  @media ${QUERIES.tabletOnly} {
+    grid-template-areas:
+      "image "
+      "heading"
+      "abstract";
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Image = styled.img`

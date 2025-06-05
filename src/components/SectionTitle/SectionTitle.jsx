@@ -6,9 +6,7 @@ const SectionTitle = ({ children, cornerLink }) => {
   return (
     <Wrapper>
       <Title>{children}</Title>
-      {cornerLink && (
-        <CornerLink href={cornerLink.href}>{cornerLink.content}</CornerLink>
-      )}
+      {cornerLink && <CornerLink href={cornerLink.href}>{cornerLink.content}</CornerLink>}
     </Wrapper>
   );
 };

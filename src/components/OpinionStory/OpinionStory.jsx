@@ -4,7 +4,7 @@ import { QUERIES } from "../../constants";
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
-    <a href={`/story/${id}`}>
+    <OpinionWrapper href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
         <div>
@@ -12,9 +12,39 @@ const OpinionStory = ({ id, title, author, avatar }) => {
           <ArticleTitle>{title}</ArticleTitle>
         </div>
       </Wrapper>
-    </a>
+    </OpinionWrapper>
   );
 };
+
+const OpinionWrapper = styled.a`
+  &:nth-of-type(1) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  &:nth-of-type(2) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  &:nth-of-type(3) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  &:nth-of-type(4) {
+    padding-top: 16px;
+  }
+
+  @media ${QUERIES.tabletOnly} {
+    &:nth-of-type(n) {
+      padding: 0;
+      border: none;
+    }
+  }
+`;
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
@@ -23,11 +53,11 @@ const Wrapper = styled.article`
   flex-direction: row-reverse;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 0;
 
   @media ${QUERIES.tabletOnly} {
-    display: revert;
     padding: 0;
+    flex-direction: column;
+    gap: 8px;
   }
 `;
 
