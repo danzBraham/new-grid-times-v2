@@ -56,8 +56,7 @@ export const SECONDARY_STORIES = [
   },
   {
     id: "d",
-    title:
-      "This season’s hottest fashions unveiled amidst designer controversy",
+    title: "This season’s hottest fashions unveiled amidst designer controversy",
     image: {
       src: "/images/fashion.jpg",
       alt: "A stylish woman carries a dozen shopping bags",

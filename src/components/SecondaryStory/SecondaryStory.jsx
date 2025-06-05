@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "../../constants";
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
@@ -15,6 +16,8 @@ const SecondaryStory = ({ id, title, image, location, abstract }) => {
 
 const Wrapper = styled.article`
   display: grid;
+  padding: 16px 0;
+  background-color: var(--color-gray-100);
   grid-template-areas:
     "image heading"
     "image abstract";
@@ -45,6 +48,10 @@ const Abstract = styled.p`
   grid-area: abstract;
   font-size: 1rem;
   white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 `;
 
 export default SecondaryStory;
