@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { QUERIES } from "../../constants";
 
 const MiniStory = ({ id, image, title }) => {
   return (
@@ -23,11 +22,6 @@ const Image = styled.img`
   aspect-ratio: 220 / 132;
   object-fit: cover;
   border-radius: 4px;
-
-  @media ${QUERIES.tabletAndUp} {
-    width: auto;
-    height: 130px;
-  }
 `;
 
 const Title = styled.h3`
