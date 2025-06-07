@@ -25,7 +25,7 @@ const Wrapper = styled.article`
 
   @media ${QUERIES.tabletOnly} {
     grid-template-areas:
-      "image "
+      "image"
       "heading"
       "abstract";
     grid-template-columns: 1fr;
