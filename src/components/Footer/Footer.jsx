@@ -176,10 +176,10 @@ const MainNavArea = styled.div`
   text-align: center;
 
   @media ${QUERIES.tabletAndUp} {
+    flex-direction: revert;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     text-align: left;
-    justify-content: space-evenly;
   }
 `;
 
