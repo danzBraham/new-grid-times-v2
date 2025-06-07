@@ -3,32 +3,15 @@ import { QUERIES } from "../../constants";
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
-    <StoryWrapper href={`/story/${id}`}>
+    <a href={`/story/${id}`}>
       <Wrapper>
         <Image alt={image.alt} src={image.src} />
         <Heading>{title}</Heading>
         <Abstract>{abstract}</Abstract>
       </Wrapper>
-    </StoryWrapper>
+    </a>
   );
 };
-
-const StoryWrapper = styled.a`
-  &:nth-of-type(1) {
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--color-gray-300);
-  }
-
-  &:nth-of-type(2) {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--color-gray-300);
-  }
-
-  &:nth-of-type(3) {
-    padding-top: 16px;
-  }
-`;
 
 const Wrapper = styled.article`
   display: grid;
@@ -75,6 +58,7 @@ const Abstract = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+  align-self: start;
 `;
 
 export default SecondaryStory;
